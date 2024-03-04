@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 
 # Load .envfile
 load_dotenv(find_dotenv())
-Huggingface_api_token=os.getenv("Huggingface_api_token")
+Huggingface_api_token=os.getenv("api_token")
 
 # gerando texto para imagem 
 
@@ -38,6 +38,9 @@ def text2speedch(text, speed=1):
     with open("audio.wav", "wb")as f:
         f.write(response.content)
 
-
+def main():
+    st.set_page_config(layout="wide",
+                       page_title="Image to audio",
+                       page_icon="")
 
 
