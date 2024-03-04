@@ -1,5 +1,6 @@
 # Creating Virtual enviroment
-``` bash 
+```
+bash 
 
 conda create -n imagevoice python=3.11
 
