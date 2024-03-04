@@ -44,5 +44,26 @@ def main():
                        page_icon="🤖")
     st.header("Turn image to speech")
     upload_file= st.file_uploader("Please Choose your image file", type=["jpg","png"])
+    if  upload_file is not None:
+        print(upload_file)
+        data=upload_file.getvalue()
+        with open( upload_file.name, "wb")as file:
+            file.write(data)
+        st.image(upload_file, caption="Uploades image",
+                 use_column_width=True)
+        scenario=img2text(upload_file.name)
+        speech=text2speedch(scenario)
 
+        with st.expander("Image Description"):
+            st.write(scenario)
+        with st.expander("speech"):
+            st.write(speech)
+
+        st.audio("audio.wav")
+
+    if __name__=="main":
+        main()
+
+
+main()
 
