@@ -1,13 +1,15 @@
 # Creating Virtual enviroment
-``` bash ```
+``` bash 
 
-conda create -n image2voice python=3.9
+conda create -n imagevoice python=3.11
 
-conda activate image2voice
+conda activate imagevoice
 
-pip install requirements.txt
+pip install -r requirements.txt
 
 conda deactivate
+
+'''
 
 ----------------------------------------------------------------------
 
