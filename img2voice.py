@@ -41,6 +41,8 @@ def text2speedch(text, speed=1):
 def main():
     st.set_page_config(layout="wide",
                        page_title="Image to audio",
-                       page_icon="")
+                       page_icon="🤖")
+    st.header("Turn image to speech")
+    upload_file= st.file_uploader("Please Choose your image file", type=["jpg","png"])
 
 
